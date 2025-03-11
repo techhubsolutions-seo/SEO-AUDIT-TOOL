@@ -78,6 +78,13 @@
       background-color: #2980b9;
       border-color: #2980b9;
     }
+    /* Disable clickable state for Coming Soon button */
+    .btn-disabled {
+      background-color: gray !important;
+      border-color: gray !important;
+      pointer-events: none;
+      opacity: 0.7;
+    }
     /* Features Section */
     .features {
       padding: 60px 20px;
@@ -106,6 +113,72 @@
     .feature-item p {
       font-size: 1rem;
       color: #666;
+    }
+    /* Affiliate (JV) Section */
+    .affiliate {
+      padding: 60px 20px;
+      background-color: #e9ecef;
+    }
+    .affiliate h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #444;
+    }
+    .affiliate p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+    .affiliate .btn-affiliate {
+      background-color: #6f42c1;
+      border-color: #6f42c1;
+      color: #fff;
+      font-weight: 700;
+      padding: 12px 30px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+    .affiliate .btn-affiliate:hover {
+      background-color: #5936a2;
+      border-color: #5936a2;
+    }
+    /* Purchase Section */
+    .purchase-section {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+    .purchase-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #444;
+    }
+    .coming-soon {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    .coming-soon h2 {
+      color: #6a0dad;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .coming-soon p {
+      font-size: 1.125rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .coming-soon span {
+      font-weight: bold;
+      color: #ff6600;
     }
     /* Testimonials Section */
     .testimonials {
@@ -136,60 +209,6 @@
       font-weight: 700;
       color: #333;
     }
-    /* Purchase Section */
-    .purchase-section {
-      padding: 60px 20px;
-      background-color: #fff;
-    }
-    .purchase-section h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #444;
-    }
-    .purchase-section .card {
-      margin: 0 auto;
-      max-width: 400px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .purchase-section .card-header {
-      background-color: #3498db;
-      color: #fff;
-      font-weight: 700;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      text-align: center;
-      font-size: 1.25rem;
-    }
-    .purchase-section .card-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #333;
-    }
-    .purchase-section ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1rem;
-      color: #555;
-    }
-    .purchase-section ul li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-    .purchase-section ul li::before {
-      content: "\f00c";
-      font-family: "Font Awesome 5 Free";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #28a745;
-      font-weight: 900;
-    }
     /* Footer */
     .footer {
       background-color: #343a40;
@@ -206,8 +225,8 @@
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container">
       <a class="navbar-brand" href="#">Tech Hub Solutions</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="color: #fff;"><i class="fas fa-bars"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -217,6 +236,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#affiliates">Affiliates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#testimonials">Testimonials</a>
@@ -236,7 +258,8 @@
         <h1>SEO Audit Tool</h1>
         <p><strong>Unlock Your Website's SEO Potential</strong><br>
            Run a full-scale audit to diagnose technical, on‑page, and link issues— and receive actionable insights instantly!</p>
-        <a href="#purchase" class="btn btn-custom btn-lg">Buy Now</a>
+        <!-- Disabled Buy Now button replaced with Coming Soon message -->
+        <a href="#" class="btn btn-custom btn-lg btn-disabled">🚀 Coming Soon</a>
       </div>
     </div>
   </section>
@@ -282,6 +305,16 @@
     </div>
   </section>
 
+  <!-- Affiliate (JV) Section -->
+  <section id="affiliates" class="affiliate">
+    <div class="container">
+      <h2 class="text-center">Affiliate Information</h2>
+      <p>Are you an affiliate looking to promote a high-converting digital product? Our SEO Audit Tool is available soon with a one-time purchase price of $20 and a generous commission. We provide a full suite of marketing materials including banners, email templates, and detailed product descriptions to help you succeed.</p>
+      <p>For more details or custom requests, please contact our support at <a href="mailto:support@techhubsolutions.com">support@techhubsolutions.com</a>.</p>
+      <a href="#purchase" class="btn btn-affiliate btn-lg">Learn More &amp; Promote</a>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials">
     <div class="container">
@@ -302,19 +335,11 @@
   <!-- Purchase Section -->
   <section id="purchase" class="purchase-section">
     <div class="container">
-      <h2 class="text-center">Buy SEO Audit Tool</h2>
-      <div class="card">
-        <div class="card-header">One-Time Purchase</div>
-        <div class="card-body">
-          <h4 class="card-title text-center">$35</h4>
-          <ul>
-            <li>Lifetime Access</li>
-            <li>Full SEO Audit Features</li>
-            <li>Instant, Actionable Insights</li>
-            <li>No Monthly Fees</li>
-          </ul>
-          <a href="YOUR_JVZOO_PURCHASE_LINK" class="btn btn-custom btn-block mt-3">Buy Now</a>
-        </div>
+      <h2 class="text-center">Coming Soon!</h2>
+      <div class="coming-soon">
+        <h2>🚀 Coming Soon!</h2>
+        <p>Our powerful SEO Audit Tool will be available for purchase shortly.</p>
+        <p><span>Stay tuned for updates!</span></p>
       </div>
     </div>
   </section>
