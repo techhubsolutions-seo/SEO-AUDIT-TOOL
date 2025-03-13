@@ -48,7 +48,6 @@
       left: 0;
       width: 100%; 
       height: 100%;
-      /* Purpleish gradient overlay */
       background: linear-gradient(45deg, rgba(128, 0, 128, 0.6), rgba(75, 0, 130, 0.6));
     }
     .hero .content {
@@ -77,13 +76,6 @@
     .btn-custom:hover {
       background-color: #2980b9;
       border-color: #2980b9;
-    }
-    /* Disable clickable state for Coming Soon button */
-    .btn-disabled {
-      background-color: gray !important;
-      border-color: gray !important;
-      pointer-events: none;
-      opacity: 0.7;
     }
     /* Features Section */
     .features {
@@ -114,7 +106,7 @@
       font-size: 1rem;
       color: #666;
     }
-    /* Affiliate (JV) Section */
+    /* Affiliate Section */
     .affiliate {
       padding: 60px 20px;
       background-color: #e9ecef;
@@ -158,27 +150,10 @@
       text-align: center;
       color: #444;
     }
-    .coming-soon {
+    .purchase-content {
       text-align: center;
-      padding: 30px 20px;
-      background-color: #f8f9fa;
-      border-radius: 10px;
       margin: 0 auto;
       max-width: 500px;
-    }
-    .coming-soon h2 {
-      color: #6a0dad;
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    .coming-soon p {
-      font-size: 1.125rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .coming-soon span {
-      font-weight: bold;
-      color: #ff6600;
     }
     /* Testimonials Section */
     .testimonials {
@@ -264,8 +239,12 @@
         <h1>SEO Audit Tool</h1>
         <p><strong>Unlock Your Website's SEO Potential</strong><br>
            Run a full-scale audit to diagnose technical, on‑page, and link issues— and receive actionable insights instantly!</p>
-        <!-- Disabled Buy Now button replaced with Coming Soon message -->
-        <a href="#" class="btn btn-custom btn-lg btn-disabled">🚀 Coming Soon</a>
+        <!-- JVZoo Buy Button #1 inserted -->
+        <div>
+          <a href="https://www.jvzoo.com/b/0/416613/1">
+            <img src="https://i.jvzoo.com/0/416613/1" alt="SEO AUDIT TOOL" border="0" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -341,11 +320,12 @@
   <!-- Purchase Section -->
   <section id="purchase" class="purchase-section">
     <div class="container">
-      <h2 class="text-center">Coming Soon!</h2>
-      <div class="coming-soon">
-        <h2>🚀 Coming Soon!</h2>
-        <p>Our powerful SEO Audit Tool will be available for purchase shortly.</p>
-        <p><span>Stay tuned for updates!</span></p>
+      <h2 class="text-center">Purchase</h2>
+      <div class="purchase-content">
+        <!-- JVZoo Buy Button #1 inserted -->
+        <a href="https://www.jvzoo.com/b/0/416613/1">
+          <img src="https://i.jvzoo.com/0/416613/1" alt="SEO AUDIT TOOL" border="0" />
+        </a>
       </div>
     </div>
   </section>
